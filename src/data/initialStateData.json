@@ -1,0 +1,219 @@
+﻿{
+  "currency": {
+    "gold": 0,
+    "silver": 0,
+    "bronze": 0
+  },
+  "clickerConfigs": [
+    {
+      "id": 0,
+      "name": "Bread",
+      "imageUrl": "/clicker1.png",
+      "currencyPerClick": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 3
+      },
+      "amount": 1,
+      "isUnlocked": true,
+      "unlockCost": 0
+    },
+    {
+      "id": 1,
+      "name": "Baguette",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 7
+      },
+      "amount": 2,
+      "isUnlocked": false,
+      "unlockCost": 1
+    },
+    {
+      "id": 2,
+      "name": "Ciabatta",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 17
+      },
+      "amount": 2,
+      "isUnlocked": false,
+      "unlockCost": 2
+    },
+    {
+      "id": 3,
+      "name": "Quantum loaf",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 0,
+        "silver": 5,
+        "bronze": 0
+      },
+      "amount": 2,
+      "isUnlocked": false,
+      "unlockCost": 8
+    },
+    {
+      "id": 4,
+      "name": "Transcendent Toast",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 0,
+        "silver": 15,
+        "bronze": 0
+      },
+      "amount": 2,
+      "isUnlocked": false,
+      "unlockCost": 30
+    },
+    {
+      "id": 5,
+      "name": "Illuminati Flour 👁️",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 5,
+        "silver": 0,
+        "bronze": 0
+      },
+      "amount": 2,
+      "isUnlocked": false,
+      "unlockCost": 120
+    },
+    {
+      "id": 6,
+      "name": "Breadzilla 🦖",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 15,
+        "silver": 0,
+        "bronze": 0
+      },
+      "amount": 7,
+      "isUnlocked": false,
+      "unlockCost": 500
+    },
+    {
+      "id": 8,
+      "name": "Bredd 🧑‍🍳",
+      "imageUrl": "/clicker2.png",
+      "currencyPerClick": {
+        "gold": 50,
+        "silver": 0,
+        "bronze": 0
+      },
+      "amount": 2,
+      "isUnlocked": false,
+      "unlockCost": 2000
+    }
+  ],
+  "autoClickerConfigs": [
+    {
+      "id": 0,
+      "name": "Auto Baker",
+      "imageUrl": "/auto-clicker1.png",
+      "currencyPerSecond": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 2
+      },
+      "quantity": 0,
+      "unlockCost": 1,
+      "isUnlocked": false
+    },
+    {
+      "id": 1,
+      "name": "Crook Baker",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 8
+      },
+      "quantity": 0,
+      "unlockCost": 5,
+      "isUnlocked": false
+    },
+    {
+      "id": 2,
+      "name": "Lvl 99 Baker",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 0,
+        "silver": 3,
+        "bronze": 0
+      },
+      "quantity": 0,
+      "unlockCost": 25,
+      "isUnlocked": false
+    },
+    {
+      "id": 3,
+      "name": "Tesla Baking Robot",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 1,
+        "silver": 2,
+        "bronze": 0
+      },
+      "quantity": 0,
+      "unlockCost": 100,
+      "isUnlocked": false
+    },
+    {
+      "id": 4,
+      "name": "Vlog Baker",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 5,
+        "silver": 0,
+        "bronze": 0
+      },
+      "quantity": 0,
+      "unlockCost": 500,
+      "isUnlocked": false
+    },
+    {
+      "id": 5,
+      "name": "French Cook",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 20,
+        "silver": 0,
+        "bronze": 0
+      },
+      "quantity": 0,
+      "unlockCost": 2500,
+      "isUnlocked": false
+    },
+    {
+      "id": 6,
+      "name": "Cryptobro",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 80,
+        "silver": 0,
+        "bronze": 0
+      },
+      "quantity": 0,
+      "unlockCost": 10000,
+      "isUnlocked": false
+    },
+    {
+      "id": 7,
+      "name": "Bredd Machine",
+      "imageUrl": "/auto-clicker2.png",
+      "currencyPerSecond": {
+        "gold": 300,
+        "silver": 0,
+        "bronze": 0
+      },
+      "quantity": 0,
+      "unlockCost": 50000,
+      "isUnlocked": false
+    }
+  ]
+}
