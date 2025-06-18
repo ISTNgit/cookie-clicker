@@ -6,9 +6,11 @@ import { AutoClickersPage } from './pages/AutoClickersPage';
 import { InfoPage } from './pages/InfoPageComponent.tsx';
 import { GameProvider } from './context/GameContextProvider.tsx';
 import './App.css';
+import {ChatComponent} from "./components/Chat.tsx";
 
 const App: React.FC = () => {
     const [currentPage, setCurrentPage] = useState('click');
+    const COIN_ID = import.meta.env.VITE_COIN_ID;
 
     const renderContent = () => {
         switch (currentPage) {
@@ -35,6 +37,7 @@ const App: React.FC = () => {
                     <main className="content">
                         {renderContent()}
                     </main>
+                    <ChatComponent coinId={COIN_ID} />
                 </div>
             </div>
         </GameProvider>

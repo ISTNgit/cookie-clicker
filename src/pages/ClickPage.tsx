@@ -2,8 +2,6 @@
 import React from 'react';
 import { useGame } from '../context/GameContextProvider';
 import type { Clicker } from "../@types/ClickerAutoClickerTypes.ts";
-import {ChatComponent} from "../components/Chat.tsx";
-import {COIN_ID} from "../data/config.tsx";
 
 export const ClickPage: React.FC = () => {
     const { state, dispatch } = useGame();
@@ -70,7 +68,6 @@ export const ClickPage: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <ChatComponent coinId={COIN_ID} />
         </div>
     );
 };
