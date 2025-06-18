@@ -10,10 +10,17 @@ interface ChatMessage {
 export const ChatComponent: React.FC<{ coinId: string }> = ({ coinId }) => {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const chatRef = useRef<HTMLDivElement>(null);
+    const URL = import.meta.env.VITE_ENV_NAME === 'PROD' ? 'https://frontend-api-v3.pump.fun/replies' : 'http://localhost:3001/api/chat';
 
     const fetchMessages = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/api/chat/${coinId}`);
+            const response = await fetch(`${URL}/${coinId}`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'User-Agent': 'Mozilla/5.0'
+                }
+            });
             if (!response.ok) throw new Error('Failed to fetch messages');
             const data = await response.json();
             setMessages(data.replies);
