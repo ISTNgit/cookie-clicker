@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
 
     return (
         <header className="bg-amber-900 text-[#FDF6ED] p-4 shadow-md max-w-screen z-50">
-            <div className="max-w-full mx-auto flex justify-end gap-6">
+            <div className="max-w-full mx-auto flex justify-end gap-6 pr-5">
                 <div className="flex items-center gap-2">
                     <span className="font-bold">Stonks 📈:</span>
                     <span className="text-lg">{Math.floor(state.currency.gold)}</span>
@@ -25,12 +25,14 @@ export const Header: React.FC = () => {
                     <span className="font-bold">Dough 🍞:</span>
                     <span className="text-lg">{Math.floor(state.currency.bronze)}</span>
                 </div>
-                <button
-                    onClick={clearGameState}
-                    className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors duration-200"
-                >
-                    Clear Data
-                </button>
+                {import.meta.env.VITE_ENV_NAME === 'DEV' && (
+                    <button
+                        onClick={clearGameState}
+                        className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors duration-200"
+                    >
+                        Clear Data
+                    </button>
+                )}
             </div>
         </header>
     );

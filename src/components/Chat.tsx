@@ -5,22 +5,16 @@ interface ChatMessage {
     id: string;
     text: string;
     timestamp: string;
+    username: string;  // Added username field
 }
 
 export const ChatComponent: React.FC<{ coinId: string }> = ({ coinId }) => {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const chatRef = useRef<HTMLDivElement>(null);
-    const URL = import.meta.env.VITE_ENV_NAME === 'PROD' ? 'https://frontend-api-v3.pump.fun/replies' : 'http://localhost:3001/api/chat';
 
     const fetchMessages = async () => {
         try {
-            const response = await fetch(`${URL}/${coinId}`, {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'User-Agent': 'Mozilla/5.0'
-                }
-            });
+            const response = await fetch(`http://localhost:3001/api/chat/${coinId}`);
             if (!response.ok) throw new Error('Failed to fetch messages');
             const data = await response.json();
             setMessages(data.replies);
@@ -56,10 +50,15 @@ export const ChatComponent: React.FC<{ coinId: string }> = ({ coinId }) => {
                         key={message.id}
                         className="bg-amber-900/50 rounded-lg p-3"
                     >
+                        <div className="flex justify-between items-start mb-1">
+                            <span className="text-sm font-semibold text-amber-200">
+                                {message.username}
+                            </span>
+                            <span className="text-xs text-gray-300">
+                                {new Date(message.timestamp).toLocaleTimeString()}
+                            </span>
+                        </div>
                         <p className="text-sm">{message.text}</p>
-                        <span className="text-xs text-gray-300">
-                            {new Date(message.timestamp).toLocaleTimeString()}
-                        </span>
                     </div>
                 ))}
             </div>
